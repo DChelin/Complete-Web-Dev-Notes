@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript If Statements</title>
+
+
+    <body>
+
+    </body>
+<!--Mini challenge below-->
+        <p>What is the magic word?</p>
+
+        <input type="type/text" id="magicWord"></input>
+
+        <button id="checkMagicWord">Submit</button>
+
+        <script type="text/Javascript">
+
+            // setting up variable with value as 1
+
+          //  var x = 2;
+
+            //testing to see if x equals 1
+          //  if (x == 1){
+                //adding an alert to state if x is 1
+           //     alert("x is 1");
+                //adding else statement to display is x is not 1
+           // } else {
+
+           //     alert("x is not 1");
+          //  }
+
+          document.getElementById("checkMagicWord").onclick = function(){
+
+            var magicWordEntered = document.getElementById("magicWord").value;
+
+            var magicWord = "Please";
+
+            if(magicWordEntered == magicWord){
+                alert("Correct Bitch!");
+
+            }else{
+
+                alert("Wrong Bitch!");
+            }
+
+          }
+
+
+        </script>
+</html>
