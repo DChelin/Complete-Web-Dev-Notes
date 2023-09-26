@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Javascript</title>
+
+    </head>
+    
+    <body>
+
+        <!--- Adding a paragraph text and adding an id to target with Javascript-->
+        <p id="text">Hello World!</p>
+
+        <p id="secondParagraph">I think Javascript is ...</p>
+
+        <!--- Adding a button with inline Javascript -->
+        <!--- Button has alert as Hi! -->
+        <button onClick="alert('FUCK!')">Click Me!</button>
+
+        <!--- Any Javascript in the script tags will be executed fast and -->
+        <!--- this is regarded as best practice when adding Javascript into -->
+        <!--- a file, not by using inline Javascript. -->
+        <!--- Adding an alert that the page has loaded below -->
+        <!--- Use the console in your browser to identify errors and run code -->
+
+        <!--- Creating a button above, then selecting the button with a get element by Id. -->
+        <button id="myButton" >Change Text</button>
+        <button id="secondButton">Append Text</button>
+
+        <!---Adding a paragraph that is blank and has an id to show text when clicked-->
+        <p id="emptyParagraph"></p>
+
+        <button id="createParagragh">Create Text</button>
+
+        <p id="moreText">Some Text</p>
+        <button id="styleText">Style Text</button>
+
+        <script type="text/javascript">
+
+            //Commenting out alert item...
+           // alert('Page is loaded!');
+
+            //Getting element by ID below as per note in line 11. Adding innerHTML
+            // And changing Hello World to Hello Dev!
+           // document.getElementById("text").innerHTML = "Hello Dev!"
+
+            //Adding a function to the button.
+            //Adding an alert when button is clicked then passing a string "Clicked"
+            //Removed the alert and now adding a function to change button text to Thank You after being clicked.
+            document.getElementById("myButton").onclick = function(){
+                
+                document.getElementById("myButton").innerHTML = "Thank You";
+
+            }
+
+            //Appending text when button is clicked.
+
+            document.getElementById("secondButton").onclick = function(){
+
+                document.getElementById("secondParagraph").innerHTML = "I think " + document.getElementById("secondParagraph").innerHTML + "kewl brah";
+
+            }
+
+            //Getting button via ID and adding a function.
+            //Adding a text to a black <p> tag with an ID assigned to it.
+            document.getElementById("createParagragh").onclick = function() {
+
+                document.getElementById("emptyParagraph").innerHTML = "<h1>Your Mutha!</h1>";
+
+            }
+
+            //Adding style to button.
+            document.getElementById("styleText").onclick = function(){
+
+                document.getElementById("moreText").style.color = "red";
+
+            //Remove CSS style with below:
+
+            document.getElementById("moreText").style.display = "none";
+
+            }
+
+        </script>
+    </body>
+</html>

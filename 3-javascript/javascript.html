@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Javascript</title>
+    </head>
+    <body>
+        <p id="text">Hello World!</p>
+
+        <button id="myButton">Change text</button>
+
+        <script type="text/Javascript">
+
+            /* Document = editing within this document
+            .getElementById .innerHTML = Fetch the HTML id
+            "Hello Rob!"; = Change the HTML text associated with the ID to 
+             Hello Rob! 
+             */
+        document.getElementById("text").innerHTML = "Hello Rob!";
+
+           /*
+            Making a button to do something when clicked.
+           */
+        document.getElementById("myButton").onclick = function(){
+            alert("Button clicked!");
+           }
+
+        document.getElementById("myButton").innerHTML = "Hello Rob!";
+        
+        </script>
+    </body>
+</html>

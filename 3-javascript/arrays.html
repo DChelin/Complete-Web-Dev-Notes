@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Arrays</title>
+
+
+    <body>
+
+    </body>
+
+        <script type="text/Javascript">
+
+        //Creating an empty array and needing to fill it with values.
+
+           var myArray = new Array();
+
+        //setting value to array as pizza.
+
+           myArray[0] = "pizza";
+
+        //setting myArray [1] to chocolate.
+
+            myArray[1] = "chocolate";
+
+        //alerting my array of pizza.
+            alert(myArray[0]);
+
+        //if you want to check the values of an array then use console.log
+
+            console.log(myArray)
+        
+        //what I saw under the console log on my browser:
+        //Array(2)0: "pizza"1: "chocolate"length: 2[[Prototype]]: Array(0)
+
+        //viewing the length of how many items are in an array only
+
+            console.log(myArray.length)
+
+        //creating an array called tweets
+
+            var tweets = ["Morning bitches!", "I fucken hate people!", "Javascript testing"];
+        
+        //if a user adds another item to the list later.
+            tweets.push("Back to work!");
+
+        //creating an alert for second string in array.
+
+            alert(tweets[1]);
+
+        //checking the console log.
+
+            console.log(tweets)
+
+        //Results from console.
+        // Array(4)
+        // 0
+        // : 
+        //"Morning bitches!"
+        //1
+        //: 
+        //"I fucken hate people!"
+        //2
+        //: 
+        //"Javascript testing"
+        //3
+        //: 
+        //"Back to work!"
+        //length
+        //: 
+        //4
+        //[[Prototype]]
+        //: 
+        //Array(0)
+
+        //remove an item from an array.
+        // so we start deleting from the first item in the array with the first number.
+        // and the second number dictates how many items should be deleted after the item in the array.
+
+        tweets.splice(2, 1);
+
+        console.log (tweets);
+
+        // add a new item to array with splice function.
+
+        tweets.splice(1, 0, "This has been added!");
+
+        console.log (tweets);
+
+        //deleting item number 1 and then replacing it.
+
+        tweets.splice(1, 1, "I love cornflakes", "Raise the roof");
+
+        console.log(tweets);
+
+        </script>
+</html>

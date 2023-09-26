@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Variables</title>
+
+
+    <body>
+
+    </body>
+
+    <!--Creating a text input and then a button next to it saying change the text. -->
+
+    <input type="text" id="textInput">
+
+    <button id="myButton">Change the text!</button>
+
+    <p id="text">This is sometext</p>
+
+        <script type="text/Javascript">
+
+            //Creating a variable and then changing the variable later to 20.
+            //Creating an alert to show variable value.
+
+          //  var x = 10;
+
+          //  x = 20;
+
+          // alert(x);
+
+            //Adding a second variable called "Rob"
+
+          //var name = "Rob";
+
+          //alert(name);
+
+          //Mini-challenge : do something with the button (Anything)
+
+        document.getElementById("myButton").onclick = function(){
+
+            // variable with empty string
+
+            var textEntered = "";
+
+            //adding alert to get value on input.
+            textEntered = document.getElementById("textInput").value;
+
+            document.getElementById("text").innerHTML = textEntered;
+
+        }
+
+
+
+            
+
+        </script>
+</html>
