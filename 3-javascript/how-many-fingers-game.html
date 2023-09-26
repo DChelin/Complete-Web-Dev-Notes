@@ -6,10 +6,41 @@
 
     <body>
 
+
     </body>
+
+    <p>How many fingers am I holding up?</p>
+    <input type="text" id="guess"></input>
+    <button id="checkGuess">Submit</button>
 
         <script type="text/Javascript">
 
-            
+            //Generating a random number and multiplying by 5
+            //The math.floor addidition makes sure the number is an even single number.
+            //Removing the 5 and replacing with 6 to get a number between 1-5.
+
+            //alert(Math.floor(Math.random() * 6));
+
+            //logic for game.
+
+            document.getElementById("checkGuess").onclick = function(){
+                
+                var randomNumber = Math.random();
+
+                randomNumber = randomNumber * 6;
+
+                randomNumber = Math.floor(randomNumber);
+
+                if(document.getElementById("guess").value == randomNumber){
+                
+                    alert("Well done! Thats correct");
+
+                } else {
+
+                    alert("Nope! The number was " + randomNumber);
+
+                }
+            }
+
         </script>
 </html>
