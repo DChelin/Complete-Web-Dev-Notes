@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript For Loops</title>
+
+
+    <body>
+
+        <div id="tweetDiv"></div>
+
+    </body>
+
+        <script type="text/Javascript">
+
+            //looping through an array of tweets
+            //always give your variable a definition even if its empty like below.
+
+            var tweetString = "";
+
+            var tweets = ["Hello bitches!", "goodnight", "free cake at my place", "meow meow"];
+
+           for (var i = 0; i < tweets.length; i++){
+
+                tweetString = tweetString + "<p>" + tweets[i] + "<p>";
+
+           }
+
+           document.getElementById("tweetDiv").innerHTML = tweetString;
+
+        </script>
+</html>

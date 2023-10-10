@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript While Loops</title>
+
+
+    <body>
+
+        <div id="tweetDiv"></div>
+
+    </body>
+
+        <script type="text/Javascript">
+
+            var tweetString = "";
+
+            var tweets = ["Hello bitches!", "goodnight", "free cake at my place", "meow meow"];
+
+            var i =0;
+
+            while(i < tweets.length){
+
+                tweetString = tweetString + "<p>" + tweets[i] + "<p>";
+
+                i++;
+
+            }
+
+           document.getElementById("tweetDiv").innerHTML = tweetString;
+
+        </script>
+</html>
