@@ -54,6 +54,17 @@
                 
                 let width = Math.random() * 300;
 
+                //occasionally changing the shape to circle if the size is bigger than 0.5
+
+                if(Math.random() > 0.5){
+
+                    document.getElementById("shape").style.borderRadius = "50%";
+
+                } else {
+
+                    document.getElementById("shape").style.borderRadius = "0";
+                }
+
                 document.getElementById("shape").style.backgroundColor = getRandomColor();
 
                 document.getElementById("shape").style.top = top + "px";
