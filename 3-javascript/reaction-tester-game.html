@@ -5,6 +5,11 @@
 
         <style type="text/css">
 
+            body {
+
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
             #shape {
 
                 width: 200px;
@@ -14,11 +19,22 @@
                 position: relative;
 
             }
+
+            .bold {
+
+                font-weight: bold;
+            }
+
+            
         </style>
 
     <body>
 
-    <p> Your Time: <span id="timeTaken"></span></p>
+    <h1>Test Your Reactions!</h1>
+
+    <p>Click on the shapes as fast as you can.</p>
+
+    <p class="bold"> Your Time: <span id="timeTaken"></span></p>
 
     <div id="shape"></div>
 
@@ -52,7 +68,7 @@
 
                 let left = Math.random() * 400;
                 
-                let width = Math.random() * 300;
+                let width = (Math.random() * 200) + 100;
 
                 //occasionally changing the shape to circle if the size is bigger than 0.5
 
