@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-2</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+            /* Creating styles for circles and squares below.   */
+
+            #circle {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            #square{
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!---Adding the circle and square below-->
+
+        <div id="circle"></div>
+
+        <div id="square"></div>
+
+        <div id="square"></div>
+
+    <script type="text/javascript">
+ 
+        // Adding jQuery string below: and selecting the cirle then adding an on click function
+
+       $("#circle").click(function() {
+
+            alert("Circle was clicked")
+
+       });
+
+       //Doing the same but for when the square is clicked.
+
+      
+       $("div").click(function() {
+
+            alert("square was clicked")
+
+        });
+
+    </script>
+
+    </body>
+
+        </script>
+</html>
