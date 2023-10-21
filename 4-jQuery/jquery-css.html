@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-css</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+            /* Creating styles for circles and squares below.   */
+
+            #circle {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            .square{
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!---Adding paragraph below circle-->
+
+        <div id="circle"></div>
+
+        <div class="square"></div>
+
+        <div class="square"></div>
+
+    <script type="text/javascript">
+ 
+        // Adding jQuery string below: and selecting the cirle then adding an on click function
+        // Adding a string to alert when the circle is clicked.
+
+       $("#circle").click(function() {
+
+           alert("The circle has been clicked!")
+
+           //changing the styles below.
+
+            $("#circle").css("width", "400px")
+
+       });
+
+       //Changing the background color of the circle to red when clicked.
+
+       $("#circle").click(function() {
+
+            $("#circle").css("background-color", "red")
+       })
+
+       //Get the css details of a property. Gives me the RGB value.
+
+       $("#circle").click(function() {
+
+            alert($("#circle").css("background-color"));
+
+       });
+
+       //Challenge: Get the width of the body of the web page.
+
+       alert($("body").css("width"));
+
+       //Gave me the pixel value - 942px
+
+       //Challenge: Make each of the squares disappear when clicked. //Below was my version, which works.
+       
+       $("#square-1").click(function() {
+
+            $("#square-1").css("display", "none")
+            
+       });
+
+       $("#square-2").click(function() {
+
+            $("#square-2").css("display", "none")
+
+        });
+
+        //Below is Robs way thats more refined. And its using "this" and using if and else statements with alerts.
+
+        $("div").click(function() {
+
+            if ($(this).attr("id") == "circle") {
+
+                alert("You clicked on a circle");
+
+            } else {
+
+                alert("You clicked on a square");   
+            }
+
+        });
+
+    </script>
+
+    </body>
+
+        </script>
+</html>

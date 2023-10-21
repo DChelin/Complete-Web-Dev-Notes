@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-3</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+            /* Creating styles for circles and squares below.   */
+
+            #circle {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            #square{
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                margin: 10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <!---Adding paragraph below circle-->
+
+        <div id="circle"></div>
+
+        <p>This is some text</p>
+
+    <script type="text/javascript">
+ 
+        // Adding jQuery string below: and selecting the cirle then adding an on click function
+        // Adding a string to chnage the text when the circle is clicked.
+
+       $("#circle").click(function() {
+
+           $("p").html("This text has changed")
+
+       });
+
+       //Changing the click function to hover which changes the text.
+
+       $("#circle").hover(function() {
+
+            $("p").html("This text has changed")
+
+        });
+
+    </script>
+
+    </body>
+
+        </script>
+</html>
