@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-fading-2</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+            #hiddenText{
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!---Adding my paragraph and button.-->
+
+        <p id="text">This is text!</p>
+
+        <button id="toggle">Toggle Text</button>
+
+    <script type="text/javascript">
+
+        //Have a variable of the state of the text, which has a boolean value of true.
+
+        var textShowing = true;
+
+    //CHALLENGE: Have a single paragraph, have a toggle button which if the text is there it will make it disappear but if the text is not there then it will make it appear.
+
+            $("#toggle").click(function() {
+
+                if (textShowing) {
+
+                    $("#text").fadeOut(function() {
+                        
+                        textShowing = false;
+
+                    });
+
+                } else {
+
+                    $("#text").fadeIn(function(){
+
+                        textShowing = true;
+
+                    });
+                }
+            });
+
+    </script>
+
+    </body>
+
+</html>

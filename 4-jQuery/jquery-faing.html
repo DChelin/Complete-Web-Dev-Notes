@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-fading</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+            /* Creating styles for circles and squares below.   */
+
+            #circle {
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            .square{
+                height: 150px;
+                width: 150px;
+                background-color: red;
+                margin: 10px;
+            }
+
+            .circle-blue{
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                background-color: blue;
+                margin: 10px;
+            }
+
+            #paragraph{
+                display: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="circle"></div>
+
+        <div class="square"></div>
+
+        <div class="square"></div>
+        
+        <div class="circle-blue"></div>
+
+        <!---Adding my paragraph and button.-->
+
+        <p id="text">This is my paragraph which needs to fade out when i clicked the button!</p>
+
+        <!---Adding paragraph and text for challenge 2-->
+        <p id="hiddenText">This is my second paragraph which needs to fade in when i clicked the button!</p>
+
+        <button id="toggle">Toggle Text</button>
+
+    <script type="text/javascript">
+    
+    //Adding a script to make divs fade out slow when clicked. And adding function to alert after fade out has finished.
+ 
+       $("div").click(function(){
+        $(this).fadeOut("slow", function() {
+
+            alert("Fadeout has finished!")
+        });
+
+       });
+
+    //Using hide instead of fade out. No gradual fading.
+
+        $(".circle-blue").click(function(){
+         $(this).hide();
+        })
+
+    //CHALLENGE: Create a paragrapgh with text and button when the button is pressed the paragraph will fade out.
+
+        $("#toggle").click(function(){
+            
+            $("#text").fadeOut();
+
+        });
+
+    //CHALLENGE: Have a second paragraph which is ininitially hidden and then when you press the button it fades that text in.
+
+        $("#toggle").click(function(){
+                
+                $("#hiddenText").fadeIn();
+
+            });
+
+    //CHALLENGE: Have a single paragraph, have a toggle button which if the text is there it will make it disappear but if the text is not there then it will make it appear.
+
+            $("#toggle").click(function(){
+                if($("#text").css("display") == "none"){
+                    $("#text").fadeIn();
+                } else {
+                    $("#text").fadeOut(;)
+                }
+            });
+
+    </script>
+
+    </body>
+
+</html>
