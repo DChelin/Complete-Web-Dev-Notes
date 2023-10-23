@@ -31,6 +31,13 @@
             background-color: rgb(0, 119, 128);
            }
 
+           #thirdSquare{
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(248, 55, 216);
+           }
+
 
         </style>
     </head>
@@ -42,6 +49,8 @@
         <div id="square"></div>
 
         <div id="secondSquare"></div>
+
+        <div id="thirdSquare"></div>
 
     <script type="text/javascript">
 
@@ -77,6 +86,21 @@
 
         });
 
+        //CHALLENGE: Make the color of this object change colour when the animation completes.
+
+        $("#thirdSquare").click(function(){
+
+            $(this).animate({width:"400px", 
+            height:"400px",
+            marginLeft: "100px",
+            marginTop: "100px",
+            }, 2000,function(){
+
+                $(this).css("background-color", "red");
+
+            });
+
+        });
 
 
     </script>
