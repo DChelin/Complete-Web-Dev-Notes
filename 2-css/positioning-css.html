@@ -13,37 +13,50 @@
                 background-color: #101010;
             }
 
-            /* Making the first section float to the left */
-
+            /* Making the posisiton relative */
+            /* Adding Z-Index to overlap items */
+            /* Adding a position of absolute */
             #first-section{
                 color: black;
                 width: 200px;
                 background-color: aqua;
-                float: left;
+                /*position: relative;
+                left: 100px;
+                top: 100px;
+                z-index: 8;*/
+               /* position: absolute;
+                left: 500px;
+                top: 200px; */
             }
-
-            /* Making the second section float to the right */
-
+            /* Adding an opacity over the item with the main Z-Index */
+            /* Adding a fixed position */
             #second-section{
                 color: black;
-                width: 200px;
+                width: 400px;
+                height: 500px;
                 background-color: aquamarine;
-                float: right;
+                /*position: fixed;*/
+                /*position: relative;
+                top: 25px;
+                left: 25px;
+                z-index: 10;
+                opacity: 0.5;*/
+            }
+
+            #third-section{
+                color: white;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position: sticky;
             }
 
             #third-section{
                 color: white;
             }
 
-            /* Clearing the float on a div */
-
-            .clear-float{
-                clear:both;
-            }
-
         </style>
 
-<!--- Items not floated will end up inthe middle or underneath a floated element-->
 
     </head>
 
@@ -51,21 +64,21 @@
 
         <div id="first-section">
 
-            <p>Hi there!</p>
+            <p>Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there!</p>
 
         </div>
 
         <div id="second-section">
 
-            <p>Hi again!</p>
+            <p>Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again!</p>
 
         </div>
 
-        <!---Adding a div with a clear float class-->
+        <div id="third-section">
 
-       <div class="clear-float"></div>
+            <p>this is the third position! this is the third position! this is the third position! this is the third position!</p>
 
-        <p id="third-section">Yo yo yo!</p>
+        </div>
     
 
     </body>
