@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-fading-2</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+           #circle{
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+           }
+
+           #square{
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(128, 15, 0);
+           }
+
+           #secondSquare{
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(0, 119, 128);
+           }
+
+           #thirdSquare{
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(248, 55, 216);
+           }
+
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="circle"></div>
+
+        <div id="square"></div>
+
+        <div id="secondSquare"></div>
+
+        <div id="thirdSquare"></div>
+
+    <script type="text/javascript">
+
+        //CHALLENGE: Do something anything when the circle is clicked.
+
+        $("#circle").click(function(){
+
+            $(this).fadeOut();
+
+        });
+
+        //I made it fade out.
+
+        //Animate the square.
+
+        $("#square").click(function(){
+            //Define the width as an array by adding {} , 
+            //the 2000 is the time that it takes to animate which is 2 seconds.
+
+            $(this).animate({width:"400px"}, 2000);
+
+        });
+
+        //Animating the second square with width and height.
+
+        $("#secondSquare").click(function(){
+
+            $(this).animate({width:"400px", 
+            height:"400px",
+            marginLeft: "100px",
+            marginTop: "100px",
+            }, 2000);
+
+        });
+
+        //CHALLENGE: Make the color of this object change colour when the animation completes.
+
+        $("#thirdSquare").click(function(){
+
+            $(this).animate({width:"400px", 
+            height:"400px",
+            marginLeft: "100px",
+            marginTop: "100px",
+            }, 2000,function(){
+
+                $(this).css("background-color", "red");
+
+            });
+
+        });
+
+
+    </script>
+
+    </body>
+
+</html>
