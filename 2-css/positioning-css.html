@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Positioning</title>
+
+
+        <style type="text/css">
+
+            /* Adding CSS classes below */
+
+            body{
+                background-color: #101010;
+            }
+
+            /* Making the first section float to the left */
+
+            #first-section{
+                color: black;
+                width: 200px;
+                background-color: aqua;
+                float: left;
+            }
+
+            /* Making the second section float to the right */
+
+            #second-section{
+                color: black;
+                width: 200px;
+                background-color: aquamarine;
+                float: right;
+            }
+
+            #third-section{
+                color: white;
+            }
+
+            /* Clearing the float on a div */
+
+            .clear-float{
+                clear:both;
+            }
+
+        </style>
+
+<!--- Items not floated will end up inthe middle or underneath a floated element-->
+
+    </head>
+
+    <body>
+
+        <div id="first-section">
+
+            <p>Hi there!</p>
+
+        </div>
+
+        <div id="second-section">
+
+            <p>Hi again!</p>
+
+        </div>
+
+        <!---Adding a div with a clear float class-->
+
+       <div class="clear-float"></div>
+
+        <p id="third-section">Yo yo yo!</p>
+    
+
+    </body>
+
+       
+</html>
