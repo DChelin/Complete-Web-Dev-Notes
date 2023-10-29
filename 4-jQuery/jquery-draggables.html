@@ -51,6 +51,17 @@
     <div id="draggable" class="draggable ui-widget-content">
         <p>I can be dragged only vertically</p>
     </div>
+
+    <h3>Or to within another DOM element:</h3>
+    <div id="containment-wrapper">
+        <div id="draggable3" class="draggable ui-widget-content">
+            <p>I&apos;m contained within the box</p>
+        </div>
+    
+        <div class="draggable ui-widget-content">
+            <p id="draggable4" class="ui-widget-header">I&apos;m contained within my parent</p>
+        </div>
+    </div>
     
         
     <script type="text/javascript">
@@ -61,6 +72,12 @@
             $( "#draggable" ).draggable({ axis: "y" });
          } );
 
+        //CHALLENGE: Make items contained within a box draggable and within a DOM element
+
+        $( function() {
+            $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+            $( "#draggable4" ).draggable({ containment: "parent" });
+        } );
 
     </script>
 
