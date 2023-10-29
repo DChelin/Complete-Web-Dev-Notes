@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Positioning</title>
+
+
+        <style type="text/css">
+
+            /* Adding CSS classes below */
+
+            body{
+                background-color: #101010;
+            }
+
+            /* Making the posisiton relative */
+            /* Adding Z-Index to overlap items */
+            /* Adding a position of absolute */
+            #first-section{
+                color: black;
+                width: 200px;
+                background-color: aqua;
+                /*position: relative;
+                left: 100px;
+                top: 100px;
+                z-index: 8;*/
+               /* position: absolute;
+                left: 500px;
+                top: 200px; */
+            }
+            /* Adding an opacity over the item with the main Z-Index */
+            /* Adding a fixed position */
+            #second-section{
+                color: black;
+                width: 400px;
+                height: 500px;
+                background-color: aquamarine;
+                /*position: fixed;*/
+                /*position: relative;
+                top: 25px;
+                left: 25px;
+                z-index: 10;
+                opacity: 0.5;*/
+            }
+
+            #third-section{
+                color: white;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position: sticky;
+            }
+
+            #third-section{
+                color: white;
+            }
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div id="first-section">
+
+            <p>Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there! Hi there!</p>
+
+        </div>
+
+        <div id="second-section">
+
+            <p>Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again! Hi again!</p>
+
+        </div>
+
+        <div id="third-section">
+
+            <p>this is the third position! this is the third position! this is the third position! this is the third position!</p>
+
+        </div>
+    
+
+    </body>
+
+       
+</html>
