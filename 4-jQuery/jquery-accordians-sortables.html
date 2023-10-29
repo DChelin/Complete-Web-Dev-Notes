@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-accordians-sortables</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="jquery-ui/jquery-ui.min.js"></script>
+
+        <style>
+
+            /*Sortable list CCS below */
+
+        #sortable { 
+            list-style-type: none; 
+            margin-top: 50px; 
+            padding: 0; 
+            width: 60%; 
+        }
+
+        #sortable li { 
+            margin: 0 3px 3px 3px; 
+            padding: 0.4em; 
+            padding-left: 1.5em; 
+            font-size: 1.4em; 
+            height: 18px; 
+        }
+
+        #sortable li span { 
+            position: absolute; 
+            margin-left: -1.3em; 
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!---Accordion list structure below-->
+
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+              <p>
+              Section 1 content. Section 1 content. Section 1 content. Section 1 content.
+              Section 1 content. Section 1 content. Section 1 content. Section 1 content.
+              Section 1 content. Section 1 content. Section 1 content. Section 1 content.
+              </p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+              <p>
+                Section 2 content. Section 2 content. Section 2 content. Section 2 content.
+                Section 2 content. Section 2 content. Section 2 content. Section 2 content.
+                Section 2 content. Section 2 content. Section 2 content. Section 2 content.
+              </p>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+              <p>
+                Section 3 content. Section 3 content. Section 3 content. Section 3 content.
+                Section 3 content. Section 3 content. Section 3 content. Section 3 content.
+                Section 3 content. Section 3 content. Section 3 content. Section 3 content.
+              </p>
+              <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+              </ul>
+            </div>
+            <h3>Section 4</h3>
+            <div>
+              <p>
+                Section 4 content. Section 4 content. Section 4 content. Section 4 content.
+                Section 4 content. Section 4 content. Section 4 content. Section 4 content.
+                Section 4 content. Section 4 content. Section 4 content. Section 4 content.
+              </p>
+              <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              </p>
+            </div>
+          </div>
+
+          <!---Sortable list structure below-->
+
+          <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+          </ul>
+
+    <script>
+
+        //CHALLENGE: Create our own accordian
+
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+
+        //CHALLENGE: Create a sortable list.
+        $( function() {
+            $( "#sortable" ).sortable();
+        } );
+
+    </script>
+
+    </body>
+
+</html>
