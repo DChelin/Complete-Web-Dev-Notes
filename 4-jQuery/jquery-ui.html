@@ -6,7 +6,8 @@
         <!--calling in the jQuery API below: --->
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <!--CHALLENGE: Integrate the jQuery UI into the page -->
 
         <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
@@ -14,13 +15,30 @@
 
         <style>
 
+        #draggable { 
+            width: 150px; 
+            height: 150px; 
+            padding: 0.5em;
+            background-color: aquamarine;
+        }
+
         </style>
 
     </head>
 
     <body>
+
+        <div id="draggable" class="ui-widget-content">
+            <p>Drag me around</p>
+          </div>
         
     <script type="text/javascript">
+
+        //CHALLENGE: Setup a draggable jQuery element.
+
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
 
 
     </script>
