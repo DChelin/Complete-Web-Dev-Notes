@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-droppables</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+        <script src="jquery-ui/jquery-ui.min.js"></script>
+
+        <style>
+
+            #orange{
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+            }
+
+            #blue{
+                width: 300px;
+                height: 300px;
+                margin: 50px 50px 50px 50px;
+                background-color: aquamarine;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!---CHALLENGE: Create a big square and a little square, and you can drag the liittle square around,
+        and when you drop it into the big square you get an alert.-->
+
+        <div id="orange"></div>
+        <div id="blue"></div>
+        
+    <script type="text/javascript">
+
+        $( function() {
+            $( "#orange" ).draggable();
+            $( "#blue" ).droppable({
+            drop: function( event, ui ) {
+               $(this)
+               alert("This was dropped in the big box!");
+            }
+            });
+        } );
+
+    </script>
+
+    </body>
+
+</html>
