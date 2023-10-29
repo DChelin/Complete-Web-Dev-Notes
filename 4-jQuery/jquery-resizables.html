@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-resizable</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+        <script src="jquery-ui/jquery-ui.min.js"></script>
+
+        <style>
+
+        #resizable { 
+            width: 150px; 
+            height: 150px; 
+            padding: 0.5em;
+            background-color: beige;
+        }
+
+        #also { 
+            width: 150px; 
+            height: 150px; 
+            padding: 0.5em;
+            background-color: rgb(182, 182, 11);
+        }
+
+        #resizable h3 { 
+            text-align: center; 
+            margin: 0; 
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="resizable">
+            <h3 class="ui-widget-header">This is my div</h3>
+          </div>
+
+        <div id="also"></div>
+        
+    <script type="text/javascript">
+
+        //CHALLENGE: Creat a resizable div.
+
+        $( "#resizable" ).resizable({
+            grid: 50,
+            alsoResize: "#also",
+            //Adding a callback function on resize.
+            resize: function (event, ui) {
+                if ($("#resizable").width() > 300) {
+                    alert("big enough");
+                }
+            }
+        });
+
+        $("also").resizable();
+
+    </script>
+
+    </body>
+
+</html>
