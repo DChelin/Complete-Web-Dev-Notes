@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery-regular-expressions</title>
+
+        <!--calling in the jQuery API below: --->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        
+        
+    <script type="text/javascript">
+
+        //Looking for a regex based on 'is'.
+        //Does the word 'is' appear in the strong
+        //Adding 'i' at the end to indicate an i-frag which is a case insensitive search.
+
+        let regex = /great/i;
+        let string = "Regex is grEaT!";
+        let result = string.match(regex);
+        alert(result);
+
+        //Checking how many times every instance of an item comes in a string.
+        //The 'g' stands for global.
+
+        let regex = /e/g;
+        let string = "Regex is grEaT!";
+        let result = string.match(regex);
+        alert(result);
+
+    </script>
+
+    </body>
+
+</html>
