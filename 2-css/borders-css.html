@@ -7,25 +7,30 @@
 
         <style type="text/css">
 
+            body{
+                background-color: rgb(47, 47, 47);
+            }
+
             #blue{
                 background-color: aqua;
-                height: 100px;
-                width: 100px;
-                margin: 10px;
+                border: 10px black solid;
             }
 
             #red{
                 background-color: red;
-                height: 100px;
-                width: 100px;
-                margin: 10px;
+                border: 10px black dashed;
             }
 
             #green{
                 background-color: greenyellow;
+                border: 10px black groove;
+            }
+
+            .square{
                 height: 100px;
                 width: 100px;
                 margin: 10px;
+                float: left;
             }
 
           
@@ -36,13 +41,13 @@
 
     <body>
 
-        <!---CHALLENGE: Make 2 divs that rae squares, 100px x 100px and make them red blue and green.-->
+        <!---CHALLENGE: Make 3 divs that are squares, 100px x 100px and make them red blue and green.-->
     
-    <div id="red"></div>
+    <div id="red" class="square"></div>
 
-    <div id="blue"></div>
+    <div id="blue" class="square"></div>
 
-    <div id="green"></div>
+    <div id="green" class="square"></div>
 
     </body>
 
