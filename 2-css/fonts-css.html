@@ -4,6 +4,12 @@
 
         <title>CSS Fonts</title>
 
+        <!---Adding Google Fonts-->
+        <!---https://fonts.google.com/specimen/Poppins?query=poppins-->
+        <!---Dont forget to copy the font family code to specify the font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
         <style type="text/css">
 
@@ -21,6 +27,8 @@
                 Brush Script MT (cursive)
             */
 
+            /* Always set a fallback font */
+
             body{
                 background-color: rgb(47, 47, 47);
             }
@@ -29,7 +37,7 @@
                 color: white;
                 font-size: 200%;
                 font-weight: 600;
-                font-family: fantasy;
+                font-family: 'Poppins', sans-serif;
             }
           
         </style>
