@@ -29,11 +29,39 @@
             }
 
              /* CREATING DIFFERENT BORDER STYLE PER CORNER BELOW. */
+             /* CHALLENGE: CREATE A DIFFERENT COLOUR FOR ALL SIDES OF THE BORDER*/
 
             #orange{
                 background-color: orange;
                 border: 10px black;
                 border-style: ridge solid dotted dashed;
+                border-top-color: pink;
+                border-right-color: blueviolet;
+                border-bottom-color: chartreuse;
+                border-left-color: deeppink;
+            }
+
+            /* Create a Border Radius Below */
+            /*CHALLENGE: CREATE A CIRCLE WITH A BORDER RADIUS, BONUS POINTS IF YOU CAN DO IT 2 DIFFERENT WAYS*/
+
+            #pink{
+                background-color: pink;
+                border-radius: 100%;
+            }
+
+            #yellow{
+                background-color: yellow;
+                border-radius: 80px 80px 80px 80px;
+            }
+
+            /*TRYING A THIRD WAY*/
+
+            #gold{
+                background-color: gold;
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
+                border-bottom-left-radius: 80px;
+                border-bottom-right-radius: 80px;
             }
 
             .square{
@@ -57,6 +85,9 @@
     <div id="blue" class="square"></div>
     <div id="green" class="square"></div>
     <div id="orange" class="square"></div>
+    <div id="pink" class="square"></div>
+    <div id="yellow" class="square"></div>
+    <div id="gold" class="square"></div>
 
     </body>
 
