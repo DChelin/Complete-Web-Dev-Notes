@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Styling Text</title>
+
+        <style type="text/css">
+
+            body{
+                background-color: rgb(47, 47, 47);
+            }
+
+            p{
+                color: white;
+            }
+
+            .bold{
+                font-weight: bold;
+            }
+
+            .italic{
+                font-style: italic;
+            }
+
+            .underline{
+                text-decoration: underline;
+            }
+
+            /*Setting my link to have no underline styling*/
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            /*Making a psuedo selector to only allow link to underlined when hovering*/
+
+            a:hover {
+                text-decoration: underline;
+                color: yellow;
+            }
+
+            .big{
+                font-size: 300%;
+            }
+          
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <p class="bold">Hello world!</p>
+
+        <p class="italic">Hello world!</p>
+
+        <!---CHALLENGE: MAKE ONE SECTION OF THE TEXT ONLY ITALIC, AND THE OTHER ITALIC AND BOLD.-->
+
+        <p class="italic">This is some Italic text. <span class="bold"> is bold and Italic</span></p>
+        
+        <p class="underline">This tect is underlined.</p>
+
+        <a href="">This is a link</a>
+
+        <p class="big">This text is big</p>
+
+    </body>
+
+       
+</html>
