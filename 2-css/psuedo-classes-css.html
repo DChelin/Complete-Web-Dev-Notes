@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Psuedo Classes</title>
+
+        <style type="text/css">
+
+            body{
+                background-color: rgb(47, 47, 47);
+                padding: 25px;
+            }
+
+            p{
+                color: white;
+                text-align: left;
+            }
+
+            a{ 
+                color: white;
+                text-decoration: none;
+            }
+
+            /* Below is a psuedo link*/
+
+            a:hover{
+                text-decoration: underline;
+                color: red;
+            }
+
+            /*Style inputs when they are focussed*/
+
+            input:focus{
+                background-color:blue;
+
+            }
+
+            /*Styling form elements based on being enabled or disabled, or if a checbox needs styling*/
+
+            input:enabled{}
+            input:disabled{}
+            input:checked{}
+
+            /*Select the first paragraph in every div.*/
+
+            p:first-child{
+                color: aquamarine;
+            }
+
+            p:last-child{
+                color: red;
+                font-size: 200%;
+            }
+
+            p:only-child{
+                color: orange;
+            }
+
+            p:first-of-type{
+
+            }
+
+            p:last-of-type{
+
+            }
+
+            p:only-of-type{
+
+            }
+
+            tr:nth-child(2n-1){
+
+                background-color: green;
+
+            }
+
+        /* Select all the empty divs*/
+
+        div:empty{
+            display:none;
+        }
+
+        /* You can use not to select items that are not set to a specific class*/
+        /* Below I am changing it to yellow */
+
+        p:not(.green){
+            color: yellow;
+        }
+
+        /*Select everything that is not a div*/
+
+        :not(div){}
+
+        /*Select the first letter only of a pragraph*/
+
+        p:first-letter{
+            font-size: 150%;
+        }
+
+        /*You can also select the first line in a p tag*/
+
+        p:first-line{}
+
+        /*Add some content after the link*/
+
+        a:after{
+            content: "This is a link."
+        }
+
+        /*Or you can create some dynamic content and link as below*/
+        /*That put the content behind the link*/
+
+        a:after{
+            content: "("attr(href)")";
+        }
+        
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div>
+            <p>Paragraph</p>
+
+            <a href="">Link</a>
+
+            <input>
+
+            <p>Last child</p>
+
+        </div>
+
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+
+        <table>
+
+            <tr><td>Paragraph</td></tr>
+            <tr><td>Paragraph</td></tr>
+            <tr><td>Paragraph</td></tr>
+            <tr><td>Paragraph</td></tr>
+            <tr><td>Paragraph</td></tr>
+            <tr><td>Paragraph</td></tr>
+
+        </table>
+
+        <a href="webpage.html">Link</a>
+
+    </body>
+
+       
+</html>
