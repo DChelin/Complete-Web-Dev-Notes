@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Advanced Selectors</title>
+
+        <style type="text/css">
+
+            body{
+                background-color: rgb(47, 47, 47);
+                padding: 25px;
+            }
+
+            p{
+                color: white;
+                text-align: left;
+            }
+
+            a{ 
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover{
+                text-decoration: underline;
+                color: red;
+            }
+
+
+            h1{
+                color: red;
+            }
+            /*Changing the clour of visited links below. */
+
+            a:visited{
+                color:aquamarine;
+            }
+
+            /* All paragraphs inside a div are styled*/
+
+            div p{
+                font-weight: bold;
+                color: greenyellow;
+            }
+
+            /*Styling elements with a h3 in the div*/
+
+            h3 ~ p{
+
+                text-decoration: line-through;
+
+            }
+
+            /* styling the paragragh following the h3 */
+
+            h3 + p{
+                font-size: 400%;
+            }
+
+            /*Targeting the link below, the a link is tragetted becuase it has a target attribute.*/
+
+            a[target]{
+                color: yellow;
+            }
+
+            /*Targeting a specific a tag with a specific href*/
+            /*Adding the "*" it will look for "google.com" */ 
+
+            a[href*="https://www.google.com/"]{
+                color:aqua;
+                font-size: 200%;
+
+            }
+  
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <h1>This is a header </h1>
+
+        <h3>H3 here</h3>
+
+        <p>This is a paragraph </p>
+
+        
+
+        <div>
+
+            <p>This is inside the div </p>
+
+            <a target="_blank" href="" > I am the link now </a>
+           
+
+        </div>
+
+
+        <a target="_blank" href="https://www.google.com/" > Google </a>
+        
+        <!---
+        
+            *= begin with
+            $= ends with
+            ~= has the value between two spaces
+            |= has the value seperated by hyphens
+        
+        -->
+
+    
+
+      
+    </body>
+
+       
+</html>
