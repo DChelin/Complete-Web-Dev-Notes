@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Gradients</title>
+
+        <style type="text/css">
+
+            body{
+                background-color: rgb(47, 47, 47);
+                padding: 25px;
+            }
+
+            p{
+                color: white;
+                text-align: left;
+            }
+
+            a{ 
+                color: white;
+                text-decoration: none;
+            }
+
+            /*Change the gradient direction with the to "right" to "left" etc*/
+            #gradient{
+                height: 200px;
+                width: 200px;
+                background-color: bisque;
+                background: linear-gradient(to right, white, orange)
+            }
+
+            /*Radial gradient below*/
+
+            #radial{
+                height: 200px;
+                width: 200px;
+                background-color: bisque;
+                background: radial-gradient( white, orange);
+            }
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div id="gradient">
+          
+            <h1>This is my content</h1>
+
+        </div>
+
+        <div id="radial"></div>
+
+      
+    </body>
+
+       
+</html>

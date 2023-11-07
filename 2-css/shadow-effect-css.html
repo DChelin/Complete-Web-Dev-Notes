@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>CSS Shadow Effect</title>
+
+        <style type="text/css">
+
+            body{
+                background-color: rgb(47, 47, 47);
+                padding: 25px;
+            }
+
+            p{
+                color: white;
+                text-align: left;
+            }
+
+            a{ 
+                color: white;
+                text-decoration: none;
+            }
+
+            /*Setting the shadow 2px to the right and 2px down*/
+            /*Added a 4px blur*/
+            /*Set text color to background color so its invisible.*/
+
+            h2{
+                text-shadow: 2px 2px 4px orangered;
+            }
+
+            /*Adding text that will glow*/
+
+            h3{
+                text-shadow: 0 0 5px red;
+            }
+            
+            /*Text with multiple shadows*/
+            h4{
+
+                text-shadow: 2px 2px 4px orangered, -5px -5px 4px yellow;
+            }
+
+            /*Creating a box shadow on a div*/
+             
+            #boxshadow{
+                height: 200px;
+                width: 200px;
+                box-shadow: 12px 12px white;
+                background-color: antiquewhite;
+            }
+
+        
+        </style>
+
+
+    </head>
+
+    <body>
+          
+            <h2>This text has a shadow</h2>
+
+            <h3>This text is glowing</h3>
+
+            <h4>This text has multiple shadows</h4>
+
+            <div id="boxshadow">This box has a shadow</div>
+      
+    </body>
+
+       
+</html>
