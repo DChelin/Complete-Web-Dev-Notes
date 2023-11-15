@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reaction Tester Game</title> 
+        <style>
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                }
+
+            #shape {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                display: none;
+                position: relative;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Test Your Reactions!</h1>
+        <p>Click on the shapes as fast as you can.</p>
+        <p class="bold"> Your Time: <span id="timeTaken"></span></p>
+        <p class="bold"> Best Time: <span id="bestTime">N/A</span></p>
+        <div id="shape"></div>
+        <script type="text/javascript">
+
+            //start new game
+            let start = new Date().getTime();
+            let bestTime = Infinity;
+
+            //get random colour each time
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            //generate random onject size and shape
+            function makeShapeAppear() {
+                let top = Math.random() * 400;
+                let left = Math.random() * 400;
+                let width = (Math.random() * 200) + 100;
+
+                if (Math.random() > 0.5) {
+                    document.getElementById("shape").style.borderRadius = "50%";
+                } else {
+                    document.getElementById("shape").style.borderRadius = "0";
+                }
+
+                document.getElementById("shape").style.backgroundColor = getRandomColor();
+                document.getElementById("shape").style.top = top + "px";
+                document.getElementById("shape").style.left = left + "px";
+                document.getElementById("shape").style.width = width + "px";
+                document.getElementById("shape").style.height = width + "px";
+                document.getElementById("shape").style.display = "block";
+                start = new Date().getTime();
+
+            //display best time
+                document.getElementById("bestTime").innerHTML = bestTime === Infinity ? "N/A" : bestTime + "s";
+            }
+            //set timer for shape to appear every 1.5seconds
+            function appearAfterDelay() {
+                setTimeout(makeShapeAppear, Math.random() + 1500);
+            }
+
+            appearAfterDelay();
+            //after clicking shape display time it took too react.
+            document.getElementById("shape").onclick = function() {
+                document.getElementById("shape").style.display = "none";
+                let end = new Date().getTime();
+                let timeTaken = (end - start) / 1000;
+                document.getElementById("timeTaken").innerHTML = timeTaken + "s";
+            //if statement to display best time
+                if (timeTaken < bestTime) {
+                    bestTime = timeTaken;
+                }
+
+                appearAfterDelay();
+            }
+
+        </script>
+    </body>
+</html>
