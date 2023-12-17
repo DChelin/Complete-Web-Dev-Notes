@@ -35,6 +35,15 @@
 
             //try sending the email.
 
+            //try sending email
+            if (mail($emailTo, $subject, $content, $headers)){
+                $successMessage = '<div class="alert alert-success" role="alert">Your message was sent, ' . 'we will get back to you ASAP!</div>';
+            }
+            else{
+                $error = '<div class="alert alert-danger" role="alert">Your message could not be sent, please try again later.</div>';
+
+            }
+
         }
     }
 
