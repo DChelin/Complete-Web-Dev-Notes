@@ -1,3 +1,45 @@
+<?php
+
+    $error = "";
+
+    $successMessage = "";
+
+    //if post exists we will check that items were sent and get by from here that there is an error showing.
+    if($_POST){
+        if(!$_POST["EMAIL"]){
+            $error .= "An email address is required.<br>";
+        }
+
+        if(!$_POST["content"]){
+            $error .= "A message is required.<br>";
+        }
+
+        if(!$_POST["subject"]){
+            $error .= "A subject line is required.<br>";
+        }
+
+        if($_POST["email"] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === false){
+            $error .= "The email address is invalid.<br>";
+        }
+
+        //check if there are errors
+
+        if($error != ""){
+            $error = '<div class="alert alert-danger" role="alert"><p>There were error(s) in your form:</p>' . $error . '</div>';
+        }
+        else{ //email is good
+            $emailTo = "devlynchelin6@gmail.com";
+            $subject = $_POST['subject'];
+            $content = $_POST['content'];
+            $headers = "From: " . $_POST['email'];
+
+            //try sending the email.
+
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
