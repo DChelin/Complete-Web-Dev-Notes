@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -40,8 +38,38 @@
         <!--- download Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
    
-        <!---- TO DO JS --->
-        
+        <!--- validating the data-->
+        <script type="text/javascript">
+            $("form").submit(function(e){
+                let error = "";
+
+                //checking that the email field is valid and filled in.
+                if($("#email").val() == ""){
+                    error += "The email field is required.<br>";
+                }
+                //checking the subject field is valid and filled in.
+                if($("#subject").val() == ""){
+                    error += "The subject field is required.<br>";
+                }
+                //checking the message field is valid and filled in.
+                if($("#content").val() == ""){
+                    error += "The message field is required.<br>";
+                }
+
+                //test if there is an error or not
+
+                if(error !=""){
+                    $("#error").html('<div class="alert alert-danger" ' +
+                    'role="alert"><p><strong>There were error(s) in your form: </strong></p>' + error + '</div>');
+                    
+                    return false;
+                }
+                else{ //no errors
+                    return true;
+                }
+            });
+        </script>
+
     </body>
 
 </html>
