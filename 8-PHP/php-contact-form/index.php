@@ -6,7 +6,7 @@
 
     //if post exists we will check that items were sent and get by from here that there is an error showing.
     if($_POST){
-        if(!$_POST["EMAIL"]){
+        if(!$_POST["email"]){
             $error .= "An email address is required.<br>";
         }
 
@@ -35,7 +35,6 @@
 
             //try sending the email.
 
-            //try sending email
             if (mail($emailTo, $subject, $content, $headers)){
                 $successMessage = '<div class="alert alert-success" role="alert">Your message was sent, ' . 'we will get back to you ASAP!</div>';
             }
@@ -54,7 +53,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=devic-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-wa-compatible" content="ie=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         
@@ -66,16 +65,19 @@
 
             <form method="post"><!--- start of the form-->
                 <fieldset class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address*">
+                    <label for="email">Please enter your email address*</label>
+                    <input type="email" class="form-control" id="email" name="email" autocomplete="on">
                     <small class="text-muted">We will never share your email with anyone else.</small>
                 </fieldset>
 
                 <fieldset class="form-group">
+                    <label for="subject">Subject*</label>
                     <input type="text" class="form-control" id="subject" name="subject">
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <textarea class="form-control" id="content" name="content" rows="3"></textarea></textarea>
+                    <label for="content">Please enter your message*</label>
+                    <textarea class="form-control" id="content" name="content" rows="3"></textarea>
                 </fieldset>
 
                 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
