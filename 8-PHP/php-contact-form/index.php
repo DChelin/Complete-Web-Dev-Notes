@@ -64,18 +64,18 @@
             <div id="error"><?php echo $error.$successMessage; ?></div>
 
             <form method="post"><!--- start of the form-->
-                <fieldset class="form-group">
+                <fieldset class="form-group mt-1 mb-1">
                     <label for="email">Please enter your email address*</label>
                     <input type="email" class="form-control" id="email" name="email" autocomplete="on">
                     <small class="text-muted">We will never share your email with anyone else.</small>
                 </fieldset>
 
-                <fieldset class="form-group">
+                <fieldset class="form-group mt-1 mb-1">
                     <label for="subject">Subject*</label>
                     <input type="text" class="form-control" id="subject" name="subject">
                 </fieldset>
 
-                <fieldset class="form-group">
+                <fieldset class="form-group mt-1 mb-1">
                     <label for="content">Please enter your message*</label>
                     <textarea class="form-control" id="content" name="content" rows="3"></textarea>
                 </fieldset>
